@@ -41,7 +41,7 @@ public class SignupActivity extends AppCompatActivity {
                             }
                         }
                         else{
-                            Toast.makeText(SignupActivity.this, "SIlahkan Login Derr", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignupActivity.this, "Silahkan Login Derr", Toast.LENGTH_SHORT).show();
                         }
                     }else{
                         Toast.makeText(SignupActivity.this, "Password salah Derr", Toast.LENGTH_SHORT).show();
