@@ -13,6 +13,7 @@ import com.example.logsign.databinding.ActivitySignupBinding;
 public class SignupActivity extends AppCompatActivity {
     ActivitySignupBinding binding;
     DatabaseHelper databaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

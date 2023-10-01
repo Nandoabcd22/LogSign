@@ -17,17 +17,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-//        setContentView(R.layout.activity_main);
         setContentView(binding.getRoot());
-        replaceFragment(new HomeFragment());
+        replaceFragment(new dashboardFragment());
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.home){
-                replaceFragment(new HomeFragment());
+            if (item.getItemId() == R.id.cartId){
+                replaceFragment(new dashboardFragment());
             } else if (item.getItemId() == R.id.profile) {
                 replaceFragment(new ProfileFragment());
             } else if (item.getItemId() == R.id.setting) {
                 replaceFragment(new SettingFragment());
+            } else if (item.getItemId() == R.id.home) {
+                replaceFragment(new HomeFragment());
             }
             return true;
         });

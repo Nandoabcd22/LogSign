@@ -7,14 +7,20 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends Fragment implements AdapterView.OnItemClickListener {
 
+    ListView listView;
+    ArrayAdapter<CharSequence> adapter;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,6 +65,20 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_list_view, container, false);
+        View root =  inflater.inflate(R.layout.fragment_profile, container, false);
+//        getSupportActionBar().setTitle("List View");
+
+
+        listView = root.findViewById(R.id.listView_view);
+        adapter = ArrayAdapter.createFromResource(getContext(),R.array.countries_arry, android.R.layout.simple_list_item_1);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(this);
+
+        return root;
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Toast.makeText(getContext(), adapter.getItem(i), Toast.LENGTH_SHORT).show();
     }
 }
