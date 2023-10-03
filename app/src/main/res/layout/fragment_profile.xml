@@ -13,18 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/search_bar"
             android:singleLine="true"
-            android:backgroundTint="#DEDEDE"
+            android:backgroundTint="#DF5959"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:minHeight="46dp"
             android:background="@drawable/edit_text_border"
             android:drawableStart="@drawable/ic_search"
-            android:drawableTint="#9f9f9f"
+            android:drawableTint="@color/white"
             android:textSize="14sp"
-            android:textColorHint="#9f9f9f"
+            android:textColorHint="@color/white"
             android:paddingHorizontal="16dp"
             android:hint="Cari Items"
             android:drawablePadding="15dp"/>
@@ -42,6 +42,7 @@
             android:id="@+id/listView_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".listViewActivity"></ListView>
+            tools:context=".listViewActivity">
+        </ListView>
     </FrameLayout>
 </RelativeLayout>

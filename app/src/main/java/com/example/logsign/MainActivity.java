@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new ProfileFragment());
             } else if (item.getItemId() == R.id.setting) {
                 replaceFragment(new SettingFragment());
-            } else if (item.getItemId() == R.id.home) {
+            } else if (item.getItemId() == R.id.home){
                 replaceFragment(new HomeFragment());
             }
             return true;

@@ -17,7 +17,7 @@
             android:id="@+id/fragment_containter"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="#AA1616"
+            android:background="#BA4343"
             android:paddingHorizontal="25dp">
 
             <LinearLayout
@@ -46,6 +46,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/nameId"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Hallo Peserta,"
@@ -179,7 +180,7 @@
 
                             <androidx.constraintlayout.utils.widget.ImageFilterButton
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="120dp"
                                 android:src="@drawable/makkh"/>
 
                         </androidx.cardview.widget.CardView>

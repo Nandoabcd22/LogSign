@@ -13,6 +13,7 @@ import com.example.logsign.databinding.ActivitySignupBinding;
 public class SignupActivity extends AppCompatActivity {
     ActivitySignupBinding binding;
     DatabaseHelper databaseHelper;
+    private String KEY_NAME = "NAMA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +24,18 @@ public class SignupActivity extends AppCompatActivity {
         binding.signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String nama = binding.editTextName.getText().toString();
                 String email = binding.signupEmail.getText().toString();
                 String password = binding.signupPassword.getText().toString();
                 String confirmPassword = binding.signupConfirm.getText().toString();
-                if(email.equals("")||password.equals("")||confirmPassword.equals(""))
+
+                if(nama.equals("")||email.equals("")||password.equals("")||confirmPassword.equals(""))
                     Toast.makeText(SignupActivity.this, "Monggo Diisi Semua ya", Toast.LENGTH_SHORT).show();
                 else{
                     if(password.equals(confirmPassword)){
+                        Intent i = new Intent(SignupActivity.this, dashboardFragment.class);
+                        i.putExtra(KEY_NAME, nama);
+                        startActivity(i);
                         Boolean checkUserEmail = databaseHelper.checkEmail(email);
                         if(checkUserEmail == false){
                             Boolean insert = databaseHelper.insertData(email, password);
@@ -43,6 +49,8 @@ public class SignupActivity extends AppCompatActivity {
                         }
                         else{
                             Toast.makeText(SignupActivity.this, "Silahkan Login Derr", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                            startActivity(intent);
                         }
                     }else{
                         Toast.makeText(SignupActivity.this, "Password salah Derr", Toast.LENGTH_SHORT).show();

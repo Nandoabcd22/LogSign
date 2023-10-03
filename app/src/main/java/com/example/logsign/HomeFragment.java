@@ -30,7 +30,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root =  inflater.inflate(R.layout.fragment_home, container, false);
-
         addData();
 
         recyclerView = root.findViewById(R.id.recycle_view);
