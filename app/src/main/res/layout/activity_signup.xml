@@ -6,24 +6,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg"
+    android:background="@drawable/well"
     tools:context=".SignupActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="850dp"
             android:orientation="vertical"
-            android:layout_marginTop="380dp"
-            android:padding="20dp">
+            android:padding="25dp"
+            android:paddingBottom="250dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo1">
+
+            </ImageView>
 
             <EditText
                 android:id="@+id/editTextName"
                 android:layout_width="346dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="30dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
                 android:background="@drawable/lavender_border"
                 android:drawableLeft="@drawable/ic_person"
                 android:drawablePadding="8dp"
@@ -31,10 +41,23 @@
                 android:padding="8dp" />
 
             <EditText
+                android:id="@+id/editFullName"
+                android:layout_gravity="center"
+                android:layout_width="346dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="8dp"
+                android:hint="Nama Lengkap"
+                android:padding="8dp" />
+
+            <EditText
                 android:id="@+id/signup_email"
                 android:layout_width="346dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="30dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/lavender_border"
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
@@ -42,10 +65,23 @@
                 android:padding="8dp" />
 
             <EditText
+                android:id="@+id/signup_nohp"
+                android:layout_width="346dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/baseline_phone_24"
+                android:drawablePadding="8dp"
+                android:hint="No. Handphone"
+                android:padding="8dp" />
+
+            <EditText
                 android:id="@+id/signup_password"
                 android:layout_width="346dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
                 android:background="@drawable/lavender_border"
                 android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
@@ -54,36 +90,131 @@
                 android:padding="8dp" />
 
             <EditText
-                android:id="@+id/signup_confirm"
+                android:id="@+id/tanggalLahirPicker"
+                android:layout_gravity="center"
                 android:layout_width="346dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/lavender_border"
-                android:drawableLeft="@drawable/baseline_password_24"
+                android:drawableLeft="@drawable/baseline_edit_calendar_24"
                 android:drawablePadding="8dp"
-                android:hint="Confirm Password"
-                android:inputType="textPassword"
+                android:hint="Tanggal Lahir"
                 android:padding="8dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioLaki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Laki-Laki" />
+
+                <RadioButton
+                    android:id="@+id/radioPerempuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan" />
+                </RadioGroup>
+
+            <EditText
+                android:id="@+id/edtiAlamat"
+                android:layout_width="346dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/baseline_maps_home_work_24"
+                android:drawablePadding="8dp"
+                android:hint="Alamat"
+                android:padding="8dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupAgama"
+                android:layout_width="360dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioislam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="islam" />
+
+                <RadioButton
+                    android:id="@+id/radiokristen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kristen" />
+
+                <RadioButton
+                    android:id="@+id/radiokatolik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="katolik" />
+                <RadioButton
+                    android:id="@+id/radiohindu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hindu" />
+                <RadioButton
+                    android:id="@+id/radiobudha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="budha" />
+            </RadioGroup>
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.218"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.492"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+            <Button
+                android:id="@+id/clickpicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/bar"
+                android:text="TAKE PICTURE"
+                android:textSize="15sp"
+                app:cornerRadius="20dp" />
+
+
 
             <Button
                 android:id="@+id/signup_button"
-                android:layout_width="344dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="30dp"
+                android:layout_width="244dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
                 android:backgroundTint="@color/bar"
                 android:text="Sign Up"
+                android:layout_gravity="center"
                 android:textSize="18sp"
                 app:cornerRadius="30dp" />
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/loginRedirectText"
-                android:text="Already an user? Login"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:padding="8dp"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/bluePL"/>
+                android:layout_marginTop="10dp"
+                android:padding="1dp"
+                android:text="Already an user? Login"
+                android:textColor="@color/bluePL"
+                android:textSize="15sp" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -5,11 +5,13 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
+
 import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String databaseName = "SignLog.db";
+    private byte[] password;
+
     public DatabaseHelper(@Nullable Context context) {
         super(context, "SignLog.db", null, 1);
     }
@@ -21,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase MyDB, int i, int i1) {
         MyDB.execSQL("drop Table if exists users");
     }
-    public Boolean insertData(String nama,String email, String password){
+    public Boolean insertData(String nama,String email){
         SQLiteDatabase MyDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("nama",nama);

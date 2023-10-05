@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -13,6 +14,9 @@
         android:theme="@style/Theme.LogSign"
         tools:targetApi="31">
         <activity
+            android:name=".DashboardActivity3"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -24,7 +28,7 @@
         <activity
             android:name=".recycleViewActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".listViewActivity"
             android:exported="false"
@@ -34,7 +38,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>
